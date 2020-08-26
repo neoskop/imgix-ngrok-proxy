@@ -1,0 +1,7 @@
+node_modules
+Dockerfile
+docker-compose.yml
+docker-compose.example.yml
+LICENSE
+README.md
+example

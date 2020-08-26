@@ -1,0 +1,14 @@
+version: "2.4"
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      NGROK_TARGET: example-image
+      IMGIX_DOMAIN: testing.imgix.net
+      IMGIX_TOKEN: <SECURE_URL_TOKEN>
+  example-image:
+    image: nginx:1.19.2
+    volumes:
+      - ./example:/usr/share/nginx/html:ro
