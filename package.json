@@ -1,6 +1,6 @@
 {
   "name": "@neoskop/imgix-ngrok-proxy",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A transparent Imgix proxy that signs URLs",
   "main": "src/index.ts",
   "repository": "git@github.com:neoskop/imgix-proxy.git",
