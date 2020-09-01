@@ -1,11 +1,19 @@
 version: "2.4"
 services:
   app:
-    build: .
+    build:
+      target: dev
+      context: .
     ports:
       - "3000:3000"
+      - "4040:4040"
     environment:
-      NGROK_TARGET: example-image
+      NGROK_MAPPING: |
+        {
+          "/cats": "example-image-cats",
+          "/dogs": "example-image-dogs"
+        }
+      NGROK_INSPECT: "true"
       IMGIX_DOMAIN: testing.imgix.net
       IMGIX_TOKEN: <SECURE_URL_TOKEN>
   example-image:
