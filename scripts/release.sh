@@ -26,10 +26,10 @@ git pull --rebase
 npm --no-git-tag-version version $1
 version=`cat package.json | jq -r .version`
 
-docker build -t neoskop/hearnoevil:$version .
-docker build -t neoskop/hearnoevil:latest .
-docker push neoskop/hearnoevil:$version
-docker push neoskop/hearnoevil:latest
+docker build -t neoskop/imgix-ngrok-proxy:$version .
+docker build -t neoskop/imgix-ngrok-proxy:latest .
+docker push neoskop/imgix-ngrok-proxy:$version
+docker push neoskop/imgix-ngrok-proxy:latest
 
 git add .
 git commit -m "chore: Bump version to ${version}."
